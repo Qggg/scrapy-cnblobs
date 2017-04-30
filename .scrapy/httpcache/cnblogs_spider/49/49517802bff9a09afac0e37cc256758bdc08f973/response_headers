@@ -1,0 +1,11 @@
+Cache-Control: private
+Content-Type: text/html; charset=utf-8
+X-Powered-By: ASP.NET
+Vary: Accept-Encoding
+X-Frame-Options: SAMEORIGIN
+Content-Encoding: gzip
+Date: Wed, 19 Apr 2017 08:35:46 GMT
+X-Aspnetmvc-Version: 5.2
+X-Ua-Compatible: IE=10
+Strict-Transport-Security: max-age=31536000
+X-Aspnet-Version: 4.0.30319
