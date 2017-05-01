@@ -163,14 +163,17 @@ class HttpProxyMiddleware(object):
 
         if ret != None:
             request.meta["proxy"] = ret
-
-    def process_request1(self, request, spider):
-        pass
-
-    def process_response1(self, request, response, spider):
-        return response
+        else:
+            if "proxy" in request.meta.keys():
+                del request.meta["proxy"]
 
     def process_request(self, request, spider):
+        pass
+
+    def process_response(self, request, response, spider):
+        return response
+
+    def process_request1(self, request, spider):
         #随机拿一个
         # dont_redirect
         # dont_retry
@@ -192,7 +195,7 @@ class HttpProxyMiddleware(object):
             self.proxy_getter.add_new_proxys()
         # print("request meta",str(request.meta))
 
-    def process_response(self, request, response, spider):
+    def process_response1(self, request, response, spider):
         """
         检查response.status，如果返回失败那么就更换
         :param request: 

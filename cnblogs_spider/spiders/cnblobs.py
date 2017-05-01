@@ -98,7 +98,7 @@ class cnblobsSpider(scrapy.Spider):
         #print("retdict=",retdict)
         if retdict["success"] == True:
             print("login succeed!")
-            yield Request("https://home.cnblogs.com/u/sheng-jie",
+            yield Request("https://home.cnblogs.com/u/kuangbin/",
                            headers=self.ahearder,
                            callback=self.parse_Author,
                             meta={'download_timeout': 5})
